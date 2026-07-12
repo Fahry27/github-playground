@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎮 GitHub Playground — Koleksi Tools AI & Dev Gratis</title>
+  <meta name="description" content="27+ tools AI, coding bot, promo scanner, dan resources developer — semua gratis atau murah.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwindcss.config = {
+      theme: {
+        extend: {
+          colors: {
+            gh: { 900: '#0d1117', 800: '#161b22', 700: '#21262d', 600: '#30363d', 500: '#484f58', 400: '#6e7681', 300: '#8b949e' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .card-hover { transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+    .pill { transition: all 0.2s; }
+    .pill:hover { transform: translateY(-1px); }
+    .pill.active { box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); }
+    .fade-up { animation: fadeUp 0.35s ease-out both; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    .hero-gradient { background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1a1e2e 100%); }
+    .glow { box-shadow: 0 0 60px rgba(59, 130, 246, 0.08); }
+    .star-badge { background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .highlight-card { border: 1px solid rgba(59, 130, 246, 0.3); }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0d1117; }
+    ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #484f58; }
+    .tag-cloud span { transition: all 0.15s; }
+    .tag-cloud span:hover { background: #30363d; color: #e6edf3; }
+    .stat-card { background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(139,92,246,0.05)); }
+  </style>
+</head>
+<body class="bg-gh-900 text-gray-300 min-h-screen">
+  <!-- Hero -->
+  <header class="hero-gradient border-b border-gh-600 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.08),transparent_60%)]"></div>
+    <div class="max-w-6xl mx-auto px-4 py-16 relative z-10">
+      <div class="text-center mb-10">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">🎮 GitHub Playground</h1>
+        <p class="text-xl text-gh-300 max-w-2xl mx-auto leading-relaxed">
+          Koleksi <span class="text-blue-400 font-semibold">27+ tools AI</span>, coding bot, promo scanner & resources developer —
+          semua <span class="text-green-400 font-semibold">gratis atau murah</span>.
+          <br><span class="text-sm text-gh-400">Dikurasi khusus, penjelasan Bahasa Indonesia.</span>
+        </p>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto mb-10">
+        <div class="stat-card rounded-xl p-4 text-center border border-gh-600 glow">
+          <div class="text-2xl font-bold text-white" id="stat-repos">27</div>
+          <div class="text-xs text-gh-400">Total Repos</div>
+        </div>
+        <div class="stat-card rounded-xl p-4 text-center border border-gh-600">
+          <div class="text-2xl font-bold text-white" id="stat-stars">555K+</div>
+          <div class="text-xs text-gh-400">Total Stars</div>
+        </div>
+        <div class="stat-card rounded-xl p-4 text-center border border-gh-600">
+          <div class="text-2xl font-bold text-white">9</div>
+          <div class="text-xs text-gh-400">Kategori</div>
+        </div>
+        <div class="stat-card rounded-xl p-4 text-center border border-gh-600">
+          <div class="text-2xl font-bold text-green-400">100%</div>
+          <div class="text-xs text-gh-400">Bahasa Indonesia</div>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="max-w-lg mx-auto relative">
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gh-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+        <input type="text" id="search" placeholder="Cari repo, tag, atau tools..."
+          class="w-full bg-gh-800 border border-gh-600 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gh-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-base">
+      </div>
+    </div>
+  </header>
+
+  <!-- Category Pills -->
+  <div class="sticky top-0 z-30 bg-gh-900/95 backdrop-blur-md border-b border-gh-700">
+    <div class="max-w-6xl mx-auto px-4 py-3">
+      <div id="categories" class="flex flex-wrap gap-2 justify-center">
+        <!-- JS populated -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Result count -->
+  <div class="max-w-6xl mx-auto px-4 pt-6 pb-2">
+    <div id="stats" class="text-sm text-gh-400 flex items-center justify-between">
+      <span></span>
+      <div class="flex gap-2">
+        <button onclick="setSort('stars')" id="sort-stars" class="px-3 py-1 rounded-lg text-xs bg-gh-700 text-gh-300 hover:bg-gh-600">⭐ Stars</button>
+        <button onclick="setSort('name')" id="sort-name" class="px-3 py-1 rounded-lg text-xs bg-gh-800 text-gh-400 hover:bg-gh-600">A-Z</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Repo Grid -->
+  <main class="max-w-6xl mx-auto px-4 pb-16">
+    <div id="repos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    <div id="empty" class="hidden text-center py-16 text-gh-400">
+      <p class="text-4xl mb-3">🔍</p>
+      <p class="text-lg">Ga ada repo yang cocok sama pencarian lo.</p>
+      <p class="text-sm mt-1">Coba kata kunci lain atau reset filter.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gh-800 border-t border-gh-600 py-8 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gh-400">
+      <div>
+        Dibuat oleh <a href="https://github.com/fahryramadhan" class="text-blue-400 hover:underline font-medium" target="_blank">Fahry Ramadhan</a>
+        · Terakhir update: <span id="last-updated">-</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://kairosos.xyz" class="text-blue-400 hover:underline" target="_blank">KairosOS</a>
+        <a href="https://router.kairosos.xyz" class="text-blue-400 hover:underline" target="_blank">9Router</a>
+        <a href="https://github.com/fahryramadhan/github-playground" class="text-blue-400 hover:underline" target="_blank">Source Code</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let DATA = { repos: [], categories: {} };
+    let activeCategory = 'all';
+    let sortBy = 'stars';
+
+    async function loadData() {
+      try {
+        const res = await fetch('data/repos.json');
+        DATA = await res.json();
+      } catch (e) {
+        // fallback inline data
+        console.error('Failed to load data', e);
+        return;
+      }
+      document.getElementById('last-updated').textContent = DATA.lastUpdated || '-';
+      renderCategories();
+      renderRepos();
+    }
+
+    function formatStars(n) {
+      if (n >= 1000) return (n / 1000).toFixed(n >= 10000 ? 0 : 1) + 'K';
+      return n.toString();
+    }
+
+    function getCatColor(cat) {
+      const colors = {
+        'ai-coding': 'bg-blue-500/10 text-blue-400 border-blue-500/20',
+        'deals': 'bg-green-500/10 text-green-400 border-green-500/20',
+        'agents': 'bg-purple-500/10 text-purple-400 border-purple-500/20',
+        'automation': 'bg-orange-500/10 text-orange-400 border-orange-500/20',
+        'cli-tools': 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20',
+        'messaging': 'bg-pink-500/10 text-pink-400 border-pink-500/20',
+        'learning': 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20',
+        'fintech': 'bg-red-500/10 text-red-400 border-red-500/20',
+        'devtools': 'bg-slate-500/10 text-slate-400 border-slate-500/20'
+      };
+      return colors[cat] || 'bg-gh-700 text-gh-300 border-gh-600';
+    }
+
+    function renderCategories() {
+      const container = document.getElementById('categories');
+      const allCount = DATA.repos.length;
+      let html = `<button onclick="filterCategory('all')" data-cat="all"
+        class="pill px-4 py-2 rounded-full text-sm font-medium bg-blue-600 text-white border border-blue-500 active">
+        🔥 Semua <span class="opacity-70">${allCount}</span></button>`;
+
+      for (const [key, cat] of Object.entries(DATA.categories)) {
+        const count = DATA.repos.filter(r => r.category === key).length;
+        html += `<button onclick="filterCategory('${key}')" data-cat="${key}"
+          class="pill px-4 py-2 rounded-full text-sm font-medium bg-gh-800 text-gh-300 border border-gh-600 hover:border-gh-500">
+          ${cat.name} <span class="opacity-50">${count}</span></button>`;
+      }
+      container.innerHTML = html;
+    }
+
+    function filterCategory(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.pill').forEach(p => {
+        const isActive = p.dataset.cat === cat;
+        p.classList.toggle('active', isActive);
+        p.className = isActive
+          ? 'pill px-4 py-2 rounded-full text-sm font-medium bg-blue-600 text-white border border-blue-500 active'
+          : 'pill px-4 py-2 rounded-full text-sm font-medium bg-gh-800 text-gh-300 border border-gh-600 hover:border-gh-500';
+      });
+      renderRepos();
+    }
+
+    function setSort(s) {
+      sortBy = s;
+      document.getElementById('sort-stars').className = s === 'stars'
+        ? 'px-3 py-1 rounded-lg text-xs bg-blue-600 text-white' : 'px-3 py-1 rounded-lg text-xs bg-gh-800 text-gh-400 hover:bg-gh-600';
+      document.getElementById('sort-name').className = s === 'name'
+        ? 'px-3 py-1 rounded-lg text-xs bg-blue-600 text-white' : 'px-3 py-1 rounded-lg text-xs bg-gh-800 text-gh-400 hover:bg-gh-600';
+      renderRepos();
+    }
+
+    function renderRepos() {
+      const query = document.getElementById('search').value.toLowerCase().trim();
+      let filtered = DATA.repos.filter(r => {
+        const matchCat = activeCategory === 'all' || r.category === activeCategory;
+        const matchSearch = !query ||
+          r.name.toLowerCase().includes(query) ||
+          r.description.toLowerCase().includes(query) ||
+          r.author.toLowerCase().includes(query) ||
+          r.tags.some(t => t.toLowerCase().includes(query));
+        return matchCat && matchSearch;
+      });
+
+      // Sort
+      if (sortBy === 'stars') {
+        filtered.sort((a, b) => b.stars - a.stars);
+      } else {
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+      }
+
+      document.getElementById('stats').querySelector('span').textContent = `Menampilkan ${filtered.length} dari ${DATA.repos.length} repo`;
+      document.getElementById('empty').classList.toggle('hidden', filtered.length > 0);
+
+      document.getElementById('repos').innerHTML = filtered.map((r, i) => {
+        const catInfo = DATA.categories[r.category] || {};
+        const catColor = getCatColor(r.color || r.category);
+        const starsHtml = r.stars > 0
+          ? `<span class="star-badge font-bold text-sm">⭐ ${formatStars(r.stars)}</span>`
+          : '<span class="text-gh-500 text-xs">baru</span>';
+        const langHtml = r.language
+          ? `<span class="bg-gh-700/80 text-gh-300 px-2 py-0.5 rounded-md text-xs border border-gh-600">${r.language}</span>`
+          : '';
+        const hlBorder = r.highlight ? 'highlight-card' : 'border-gh-600';
+        const delay = Math.min(i * 30, 300);
+
+        return `
+          <a href="${r.url}" target="_blank" rel="noopener"
+            class="card-hover block bg-gh-800 ${hlBorder} rounded-xl p-5 hover:border-gh-500 fade-up"
+            style="animation-delay: ${delay}ms">
+            <div class="flex items-start justify-between mb-2">
+              <div class="flex items-center gap-2">
+                <h3 class="font-bold text-white text-base hover:text-blue-400 transition-colors">${r.name}</h3>
+                ${r.highlight ? '<span class="text-xs bg-blue-500/20 text-blue-400 px-1.5 py-0.5 rounded font-medium">populer</span>' : ''}
+              </div>
+              <span class="text-gh-500 text-xs flex-shrink-0 ml-2">@${r.author}</span>
+            </div>
+            <p class="text-gh-300 text-sm mb-4 leading-relaxed line-clamp-3">${r.description}</p>
+            <div class="flex flex-wrap items-center gap-2 mb-3">
+              ${starsHtml}
+              ${langHtml}
+              <span class="text-xs ${catColor} px-2 py-0.5 rounded-md border">${catInfo.name || ''}</span>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              ${r.tags.map(t => `<span class="tag-cloud text-gh-500 text-xs px-1.5 py-0.5 rounded cursor-default">#${t}</span>`).join('')}
+            </div>
+          </a>
+        `;
+      }).join('');
+    }
+
+    document.getElementById('search').addEventListener('input', renderRepos);
+    document.addEventListener('keydown', e => {
+      if (e.key === '/' && document.activeElement !== document.getElementById('search')) {
+        e.preventDefault();
+        document.getElementById('search').focus();
+      }
+    });
+    loadData();
+  </script>
+</body>
+</html>

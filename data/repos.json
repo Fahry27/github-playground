@@ -1,0 +1,349 @@
+{
+  "lastUpdated": "2026-07-12",
+  "repos": [
+    {
+      "name": "ollama",
+      "url": "https://github.com/ollama/ollama",
+      "author": "ollama",
+      "description": "Jalankan model AI (DeepSeek, Qwen, Gemma, dll) langsung di laptop lo — gratis, tanpa API key, tanpa batas.",
+      "stars": 175990,
+      "language": "Go",
+      "category": "ai-coding",
+      "tags": ["local", "llm", "gratis", "offline"],
+      "highlight": true
+    },
+    {
+      "name": "free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "author": "Alishahryar1",
+      "description": "Pake Claude Code & OpenAI Codex GRATIS — dari terminal, VSCode, atau Discord. Support voice command juga.",
+      "stars": 39764,
+      "language": "Python",
+      "category": "ai-coding",
+      "tags": ["gratis", "claude-code", "codex", "discord"],
+      "highlight": true
+    },
+    {
+      "name": "ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "author": "DietrichGebert",
+      "description": "Bikin AI agent mikir kayak senior dev paling males — kode terbaik adalah kode yang ga pernah ditulis. Anti over-engineering.",
+      "stars": 80995,
+      "language": "JavaScript",
+      "category": "agents",
+      "tags": ["claude", "cursor", "yagni", "anti-ribet"],
+      "highlight": true
+    },
+    {
+      "name": "generative-ai-for-beginners",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners",
+      "author": "microsoft",
+      "description": "21 pelajaran GRATIS dari Microsoft: cara bikin aplikasi pake Generative AI. Dari nol sampai bisa.",
+      "stars": 112917,
+      "language": "Jupyter Notebook",
+      "category": "learning",
+      "tags": ["microsoft", "gratis", "pemula", "gen-ai"],
+      "highlight": true
+    },
+    {
+      "name": "AI-For-Beginners",
+      "url": "https://github.com/microsoft/AI-For-Beginners",
+      "author": "microsoft",
+      "description": "Kurikulum AI lengkap 12 minggu dari Microsoft: Neural Networks, Computer Vision, NLP, Transformers. Ada Bahasa Indonesia!",
+      "stars": 52171,
+      "language": "Jupyter Notebook",
+      "category": "learning",
+      "tags": ["microsoft", "kurikulum", "ml", "nlp", "cv"],
+      "highlight": true
+    },
+    {
+      "name": "9router",
+      "url": "https://github.com/decolua/9router",
+      "author": "decolua",
+      "description": "Router AI coding GRATIS — hubungin Claude Code, Cursor, Codex ke 40+ provider gratis. Auto-fallback, hemat token 40%.",
+      "stars": 21878,
+      "language": "JavaScript",
+      "category": "ai-coding",
+      "tags": ["router", "gratis", "multi-provider"],
+      "highlight": true
+    },
+    {
+      "name": "AionUi",
+      "url": "https://github.com/iOfficeAI/AionUi",
+      "author": "iOfficeAI",
+      "description": "Aplikasi Cowork GRATIS 24/7 buat jalanin banyak AI coding agent sekaligus: Claude Code, Codex, Gemini CLI, dll.",
+      "stars": 29898,
+      "language": null,
+      "category": "automation",
+      "tags": ["multi-agent", "gratis", "otomatis"],
+      "highlight": true
+    },
+    {
+      "name": "qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "author": "QwenLM",
+      "description": "AI coding agent open-source dari Alibaba/Qwen — jalan di terminal, gratis.",
+      "stars": 25973,
+      "language": "Python",
+      "category": "ai-coding",
+      "tags": ["alibaba", "qwen", "gratis", "terminal"],
+      "highlight": false
+    },
+    {
+      "name": "cmux",
+      "url": "https://github.com/manaflow-ai/cmux",
+      "author": "manaflow-ai",
+      "description": "Terminal macOS khusus buat AI coding agent — tab vertikal, notifikasi, multitasking. Kayak iTerm tapi buat AI.",
+      "stars": 24309,
+      "language": "Rust",
+      "category": "devtools",
+      "tags": ["terminal", "macos", "multitasking"],
+      "highlight": false
+    },
+    {
+      "name": "plandex",
+      "url": "https://github.com/plandex-ai/plandex",
+      "author": "plandex-ai",
+      "description": "AI coding agent open-source buat proyek gede — bisa handle banyak file sekaligus, cocok buat refactor besar.",
+      "stars": 15523,
+      "language": "Go",
+      "category": "ai-coding",
+      "tags": ["open-source", "multi-file", "refactor"],
+      "highlight": false
+    },
+    {
+      "name": "codeburn",
+      "url": "https://github.com/getagentseal/codeburn",
+      "author": "getagentseal",
+      "description": "Tracker GRATIS buat pantau berapa token & biaya yang lo habisin di 31 AI tools (Claude Code, Cursor, Codex, dll).",
+      "stars": 8619,
+      "language": "TypeScript",
+      "category": "devtools",
+      "tags": ["tracker", "biaya", "token", "gratis"],
+      "highlight": false
+    },
+    {
+      "name": "whatsmeow",
+      "url": "https://github.com/tulir/whatsmeow",
+      "author": "tulir",
+      "description": "Library Go buat WhatsApp API (multidevice) — bikin WA bot yang stabil & legit. Dipake banyak bridge Matrix.",
+      "stars": 6700,
+      "language": "Go",
+      "category": "messaging",
+      "tags": ["whatsapp", "bot", "api", "go"],
+      "highlight": false
+    },
+    {
+      "name": "emdash",
+      "url": "https://github.com/generalaction/emdash",
+      "author": "generalaction",
+      "description": "IDE agentic open-source (YC W26) — jalanin banyak coding agent paralel dari provider manapun.",
+      "stars": 5134,
+      "language": "TypeScript",
+      "category": "ai-coding",
+      "tags": ["ide", "paralel", "yc"],
+      "highlight": false
+    },
+    {
+      "name": "claude-devtools",
+      "url": "https://github.com/matt1398/claude-devtools",
+      "author": "matt1398",
+      "description": "DevTools buat Claude Code — inspeksi session log, tool calls, token usage, subagent, dan context window dalam UI visual.",
+      "stars": 3701,
+      "language": "TypeScript",
+      "category": "devtools",
+      "tags": ["devtools", "claude-code", "debug"],
+      "highlight": false
+    },
+    {
+      "name": "gpt-promo-scanner",
+      "url": "https://github.com/JUk1-GH/gpt-promo-scanner",
+      "author": "JUk1-GH",
+      "description": "Scanner otomatis promo code ChatGPT Team/Business — scan 17 negara, 34 kode valid, diskon sampai 71%!",
+      "stars": 680,
+      "language": "Python",
+      "category": "deals",
+      "tags": ["chatgpt", "promo", "diskon", "scanner"],
+      "highlight": false
+    },
+    {
+      "name": "OpenMonoAgent.ai",
+      "url": "https://github.com/StartupHakk/OpenMonoAgent.ai",
+      "author": "StartupHakk",
+      "description": "Coding agent GRATIS 100% open-source yang jalan pakai LLM lokal — unlimited token, install satu command.",
+      "stars": 1635,
+      "language": "Python",
+      "category": "ai-coding",
+      "tags": ["lokal", "gratis", "open-source"],
+      "highlight": false
+    },
+    {
+      "name": "ai-dev-tools-zoomcamp",
+      "url": "https://github.com/DataTalksClub/ai-dev-tools-zoomcamp",
+      "author": "DataTalksClub",
+      "description": "Kursus GRATIS: cara pake AI tools buat nulis kode lebih cepat & bagus. Format cohort (ada jadwal & komunitas).",
+      "stars": 1152,
+      "language": null,
+      "category": "learning",
+      "tags": ["kursus", "gratis", "cohort"],
+      "highlight": false
+    },
+    {
+      "name": "free-ai-coding",
+      "url": "https://github.com/inmve/free-ai-coding",
+      "author": "inmve",
+      "description": "Daftar tools AI coding yang ngasih Claude Opus/Sonnet, GPT-5, Gemini Pro GRATAS — dikurasi & terverifikasi.",
+      "stars": 754,
+      "language": null,
+      "category": "deals",
+      "tags": ["daftar", "gratis", "kurasi"],
+      "highlight": false
+    },
+    {
+      "name": "9remote",
+      "url": "https://github.com/decolua/9remote",
+      "author": "decolua",
+      "description": "Terminal di kantong lo — kontrol Claude Code, Codex, Gemini CLI dari HP atau browser. Coding dari mana aja.",
+      "stars": 398,
+      "language": null,
+      "category": "messaging",
+      "tags": ["mobile", "remote", "terminal"],
+      "highlight": false
+    },
+    {
+      "name": "Shopee-flashsale-bot",
+      "url": "https://github.com/MRHRTZ/Shopee-flashsale-bot",
+      "author": "MRHRTZ",
+      "description": "Bot auto-checkout Shopee flash sale — countdown realtime, begitu sale buka langsung beli. ⚠️ Sudah terdeteksi anti-bot.",
+      "stars": 272,
+      "language": "Python",
+      "category": "automation",
+      "tags": ["shopee", "bot", "flash-sale"],
+      "highlight": false
+    },
+    {
+      "name": "perplexity-cli",
+      "url": "https://github.com/dawid-szewc/perplexity-cli",
+      "author": "dawid-szewc",
+      "description": "Tanya jawab dari terminal pake Perplexity API — lengkap dengan sumber/sitasi. Cocok buat riset cepat.",
+      "stars": 173,
+      "language": "Python",
+      "category": "cli-tools",
+      "tags": ["perplexity", "cli", "riset"],
+      "highlight": false
+    },
+    {
+      "name": "ai-coding-deals",
+      "url": "https://github.com/codertesla/ai-coding-deals",
+      "author": "codertesla",
+      "description": "Panduan hemat AI coding: free tier, diskon, referral credits & alternatif open-source. Panduan lengkap.",
+      "stars": 56,
+      "language": "Python",
+      "category": "deals",
+      "tags": ["panduan", "hemat", "diskon"],
+      "highlight": false
+    },
+    {
+      "name": "CodexScope",
+      "url": "https://github.com/JUk1-GH/CodexScope",
+      "author": "JUk1-GH",
+      "description": "Alat benchmarking buat OpenAI Codex — test performa & bandingin hasil.",
+      "stars": 51,
+      "language": "JavaScript",
+      "category": "devtools",
+      "tags": ["codex", "benchmark", "openai"],
+      "highlight": false
+    },
+    {
+      "name": "1Mbrain",
+      "url": "https://github.com/mrizkiiy04/1Mbrain",
+      "author": "mrizkiiy04",
+      "description": "Memory layer grafik semantik buat AI agent — bikin agent bisa \"ingat\" percakapan lama secara cerdas.",
+      "stars": 26,
+      "language": "TypeScript",
+      "category": "agents",
+      "tags": ["memory", "grafik", "agent"],
+      "highlight": false
+    },
+    {
+      "name": "pi-commandcode-provider",
+      "url": "https://github.com/patlux/pi-commandcode-provider",
+      "author": "patlux",
+      "description": "Plugin buat Pi coding tool yang hubungin ke Command Code API — 18 model (Claude, GPT, DeepSeek, Qwen, dll).",
+      "stars": 61,
+      "language": "TypeScript",
+      "category": "ai-coding",
+      "tags": ["pi", "multi-model", "plugin"],
+      "highlight": false
+    },
+    {
+      "name": "mimoclaude",
+      "url": "https://github.com/ahmadghaisanfad2/mimoclaude",
+      "author": "ahmadghaisanfad2",
+      "description": "Jalanin Claude Code pake Xiaomi MiMo API — jauh lebih murah dari Anthropic langsung. Install satu command.",
+      "stars": 1,
+      "language": "PowerShell",
+      "category": "ai-coding",
+      "tags": ["mimo", "xiaomi", "murah"],
+      "highlight": false
+    },
+    {
+      "name": "DynaQRIS",
+      "url": "https://dynaqris.pages.dev",
+      "author": "dynaqris",
+      "description": "API QRIS Dinamis GRATIS & instan — ubah QRIS statis jadi dinamis via REST API. Cocok buat payment gateway custom.",
+      "stars": 0,
+      "language": null,
+      "category": "fintech",
+      "tags": ["qris", "pembayaran", "indonesia", "api"],
+      "highlight": false
+    }
+  ],
+  "categories": {
+    "ai-coding": {
+      "name": "🤖 Tools AI Coding Gratis",
+      "description": "Router, provider, dan tools buat akses AI coding assistant tanpa bayar",
+      "color": "blue"
+    },
+    "deals": {
+      "name": "💰 Promo & Diskon AI",
+      "description": "Promo code, diskon, dan panduan hemat untuk tools AI",
+      "color": "green"
+    },
+    "agents": {
+      "name": "🧠 AI Memory & Agent",
+      "description": "Infrastruktur agent, memory layer, dan prompt engineering",
+      "color": "purple"
+    },
+    "automation": {
+      "name": "🌐 Otomasi & E-commerce",
+      "description": "Bot otomasi untuk e-commerce, browser, dan web scraping",
+      "color": "orange"
+    },
+    "cli-tools": {
+      "name": "💬 Tools CLI AI",
+      "description": "Command-line interface untuk layanan AI",
+      "color": "cyan"
+    },
+    "messaging": {
+      "name": "📱 Messaging & Komunikasi",
+      "description": "WhatsApp, Telegram, dan tools akses remote",
+      "color": "pink"
+    },
+    "learning": {
+      "name": "📚 Belajar AI",
+      "description": "Kurikulum, kursus, dan materi edukasi AI",
+      "color": "yellow"
+    },
+    "fintech": {
+      "name": "💳 Pembayaran & Fintech",
+      "description": "API pembayaran, QRIS, dan tools fintech Indonesia",
+      "color": "red"
+    },
+    "devtools": {
+      "name": "🔧 Produktivitas Dev",
+      "description": "Benchmarking, debug, tracking biaya, dan tools developer",
+      "color": "slate"
+    }
+  }
+}
