@@ -1,0 +1,58 @@
+name: Update Star Counts
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Setiap Minggu
+  workflow_dispatch:
+
+jobs:
+  update-stars:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Update star counts from GitHub API
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node -e "
+          const fs = require('fs');
+          const data = JSON.parse(fs.readFileSync('data/repos.json', 'utf8'));
+          async function update() {
+            let updated = 0;
+            for (const repo of data.repos) {
+              if (!repo.url.includes('github.com')) continue;
+              const parts = repo.url.replace('https://github.com/', '').split('/');
+              if (parts.length < 2) continue;
+              try {
+                const res = await fetch('https://api.github.com/repos/' + parts[0] + '/' + parts[1], {
+                  headers: { 'Authorization': 'Bearer ' + process.env.GITHUB_TOKEN }
+                });
+                if (res.ok) {
+                  const info = await res.json();
+                  if (info.stargazers_count !== undefined) {
+                    console.log(repo.name + ': ' + repo.stars + ' -> ' + info.stargazers_count);
+                    repo.stars = info.stargazers_count;
+                    updated++;
+                  }
+                }
+              } catch(e) { console.log('Skip: ' + repo.name); }
+              await new Promise(r => setTimeout(r, 200)); // rate limit
+            }
+            data.lastUpdated = new Date().toISOString().split('T')[0];
+            fs.writeFileSync('data/repos.json', JSON.stringify(data, null, 2));
+            console.log('Updated ' + updated + ' repos');
+          }
+          update();
+          "
+      - name: Commit updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/repos.json
+          git diff --cached --quiet || git commit -m "chore: update star counts [skip ci]"
+          git push
