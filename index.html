@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🎮 GitHub Playground — Koleksi Tools AI & Dev Gratis</title>
-  <meta name="description" content="27+ tools AI, coding bot, promo scanner, dan resources developer — semua gratis atau murah.">
+  <title>🎮 GitHub Playground — 27+ Tools AI & Dev Gratis</title>
+  <meta name="description" content="Koleksi 27+ tools AI, coding bot, promo scanner & resources developer — semua gratis, penjelasan Bahasa Indonesia.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -12,268 +12,246 @@
       theme: {
         extend: {
           colors: {
-            gh: { 900: '#0d1117', 800: '#161b22', 700: '#21262d', 600: '#30363d', 500: '#484f58', 400: '#6e7681', 300: '#8b949e' }
-          }
+            surface: { DEFAULT: '#0a0a0f', 1: '#12121a', 2: '#1a1a26', 3: '#242436' },
+            accent: { DEFAULT: '#6366f1', light: '#818cf8', dim: '#4f46e5' },
+            muted: '#64668b',
+            subtle: '#2a2a3d'
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
         }
       }
     }
   </script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    .card-hover { transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
-    .card-hover:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
-    .pill { transition: all 0.2s; }
-    .pill:hover { transform: translateY(-1px); }
-    .pill.active { box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); }
-    .fade-up { animation: fadeUp 0.35s ease-out both; }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-    .hero-gradient { background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1a1e2e 100%); }
-    .glow { box-shadow: 0 0 60px rgba(59, 130, 246, 0.08); }
-    .star-badge { background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .highlight-card { border: 1px solid rgba(59, 130, 246, 0.3); }
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #0d1117; }
-    ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #484f58; }
-    .tag-cloud span { transition: all 0.15s; }
-    .tag-cloud span:hover { background: #30363d; color: #e6edf3; }
-    .stat-card { background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(139,92,246,0.05)); }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #0a0a0f; color: #c8c8e0; }
+    ::selection { background: rgba(99,102,241,0.3); }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #2a2a3d; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #6366f1; }
+    .noise { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E"); }
+    .card { background: linear-gradient(135deg, rgba(26,26,38,0.8), rgba(18,18,26,0.6)); backdrop-filter: blur(20px); border: 1px solid rgba(99,102,241,0.08); transition: all 0.3s cubic-bezier(0.4,0,0.2,1); }
+    .card:hover { border-color: rgba(99,102,241,0.25); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 40px rgba(99,102,241,0.06); }
+    .glow-line { height: 1px; background: linear-gradient(90deg, transparent, rgba(99,102,241,0.4), transparent); }
+    .hero-glow { background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99,102,241,0.15), transparent); }
+    .stat-glow { background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(168,85,247,0.04)); border: 1px solid rgba(99,102,241,0.12); }
+    .pill { transition: all 0.2s; border: 1px solid transparent; }
+    .pill:hover { background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.2); }
+    .pill.active { background: rgba(99,102,241,0.15); border-color: rgba(99,102,241,0.4); color: #818cf8; }
+    .tag { transition: all 0.15s; }
+    .tag:hover { background: rgba(99,102,241,0.1); color: #818cf8; }
+    .fade-in { animation: fadeIn 0.4s ease-out both; }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes pulse-slow { 0%,100% { opacity:0.4; } 50% { opacity:0.8; } }
+    .pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
+    .star-gradient { background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .search-glow:focus { box-shadow: 0 0 0 3px rgba(99,102,241,0.15), 0 0 20px rgba(99,102,241,0.08); }
+    .cat-badge { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.05em; }
   </style>
 </head>
-<body class="bg-gh-900 text-gray-300 min-h-screen">
-  <!-- Hero -->
-  <header class="hero-gradient border-b border-gh-600 relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.08),transparent_60%)]"></div>
-    <div class="max-w-6xl mx-auto px-4 py-16 relative z-10">
-      <div class="text-center mb-10">
-        <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">🎮 GitHub Playground</h1>
-        <p class="text-xl text-gh-300 max-w-2xl mx-auto leading-relaxed">
-          Koleksi <span class="text-blue-400 font-semibold">27+ tools AI</span>, coding bot, promo scanner & resources developer —
-          semua <span class="text-green-400 font-semibold">gratis atau murah</span>.
-          <br><span class="text-sm text-gh-400">Dikurasi khusus, penjelasan Bahasa Indonesia.</span>
-        </p>
-      </div>
-
-      <!-- Stats Row -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto mb-10">
-        <div class="stat-card rounded-xl p-4 text-center border border-gh-600 glow">
-          <div class="text-2xl font-bold text-white" id="stat-repos">27</div>
-          <div class="text-xs text-gh-400">Total Repos</div>
-        </div>
-        <div class="stat-card rounded-xl p-4 text-center border border-gh-600">
-          <div class="text-2xl font-bold text-white" id="stat-stars">555K+</div>
-          <div class="text-xs text-gh-400">Total Stars</div>
-        </div>
-        <div class="stat-card rounded-xl p-4 text-center border border-gh-600">
-          <div class="text-2xl font-bold text-white">9</div>
-          <div class="text-xs text-gh-400">Kategori</div>
-        </div>
-        <div class="stat-card rounded-xl p-4 text-center border border-gh-600">
-          <div class="text-2xl font-bold text-green-400">100%</div>
-          <div class="text-xs text-gh-400">Bahasa Indonesia</div>
-        </div>
-      </div>
-
-      <!-- Search -->
-      <div class="max-w-lg mx-auto relative">
-        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gh-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-        </svg>
-        <input type="text" id="search" placeholder="Cari repo, tag, atau tools..."
-          class="w-full bg-gh-800 border border-gh-600 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gh-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-base">
-      </div>
-    </div>
-  </header>
-
-  <!-- Category Pills -->
-  <div class="sticky top-0 z-30 bg-gh-900/95 backdrop-blur-md border-b border-gh-700">
-    <div class="max-w-6xl mx-auto px-4 py-3">
-      <div id="categories" class="flex flex-wrap gap-2 justify-center">
-        <!-- JS populated -->
-      </div>
-    </div>
+<body class="noise min-h-screen">
+  <!-- Ambient Background -->
+  <div class="fixed inset-0 pointer-events-none">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent/5 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-0 right-0 w-[600px] h-[300px] bg-purple-500/3 rounded-full blur-[100px]"></div>
   </div>
 
-  <!-- Result count -->
-  <div class="max-w-6xl mx-auto px-4 pt-6 pb-2">
-    <div id="stats" class="text-sm text-gh-400 flex items-center justify-between">
-      <span></span>
-      <div class="flex gap-2">
-        <button onclick="setSort('stars')" id="sort-stars" class="px-3 py-1 rounded-lg text-xs bg-gh-700 text-gh-300 hover:bg-gh-600">⭐ Stars</button>
-        <button onclick="setSort('name')" id="sort-name" class="px-3 py-1 rounded-lg text-xs bg-gh-800 text-gh-400 hover:bg-gh-600">A-Z</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Repo Grid -->
-  <main class="max-w-6xl mx-auto px-4 pb-16">
-    <div id="repos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
-    <div id="empty" class="hidden text-center py-16 text-gh-400">
-      <p class="text-4xl mb-3">🔍</p>
-      <p class="text-lg">Ga ada repo yang cocok sama pencarian lo.</p>
-      <p class="text-sm mt-1">Coba kata kunci lain atau reset filter.</p>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-gh-800 border-t border-gh-600 py-8 px-4">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gh-400">
-      <div>
-        Dibuat oleh <a href="https://github.com/fahryramadhan" class="text-blue-400 hover:underline font-medium" target="_blank">Fahry Ramadhan</a>
-        · Terakhir update: <span id="last-updated">-</span>
-      </div>
-      <div class="flex items-center gap-4">
-        <a href="https://kairosos.xyz" class="text-blue-400 hover:underline" target="_blank">KairosOS</a>
-        <a href="https://router.kairosos.xyz" class="text-blue-400 hover:underline" target="_blank">9Router</a>
-        <a href="https://github.com/fahryramadhan/github-playground" class="text-blue-400 hover:underline" target="_blank">Source Code</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    let DATA = { repos: [], categories: {} };
-    let activeCategory = 'all';
-    let sortBy = 'stars';
-
-    async function loadData() {
-      try {
-        const res = await fetch('data/repos.json');
-        DATA = await res.json();
-      } catch (e) {
-        // fallback inline data
-        console.error('Failed to load data', e);
-        return;
-      }
-      document.getElementById('last-updated').textContent = DATA.lastUpdated || '-';
-      renderCategories();
-      renderRepos();
-    }
-
-    function formatStars(n) {
-      if (n >= 1000) return (n / 1000).toFixed(n >= 10000 ? 0 : 1) + 'K';
-      return n.toString();
-    }
-
-    function getCatColor(cat) {
-      const colors = {
-        'ai-coding': 'bg-blue-500/10 text-blue-400 border-blue-500/20',
-        'deals': 'bg-green-500/10 text-green-400 border-green-500/20',
-        'agents': 'bg-purple-500/10 text-purple-400 border-purple-500/20',
-        'automation': 'bg-orange-500/10 text-orange-400 border-orange-500/20',
-        'cli-tools': 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20',
-        'messaging': 'bg-pink-500/10 text-pink-400 border-pink-500/20',
-        'learning': 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20',
-        'fintech': 'bg-red-500/10 text-red-400 border-red-500/20',
-        'devtools': 'bg-slate-500/10 text-slate-400 border-slate-500/20'
-      };
-      return colors[cat] || 'bg-gh-700 text-gh-300 border-gh-600';
-    }
-
-    function renderCategories() {
-      const container = document.getElementById('categories');
-      const allCount = DATA.repos.length;
-      let html = `<button onclick="filterCategory('all')" data-cat="all"
-        class="pill px-4 py-2 rounded-full text-sm font-medium bg-blue-600 text-white border border-blue-500 active">
-        🔥 Semua <span class="opacity-70">${allCount}</span></button>`;
-
-      for (const [key, cat] of Object.entries(DATA.categories)) {
-        const count = DATA.repos.filter(r => r.category === key).length;
-        html += `<button onclick="filterCategory('${key}')" data-cat="${key}"
-          class="pill px-4 py-2 rounded-full text-sm font-medium bg-gh-800 text-gh-300 border border-gh-600 hover:border-gh-500">
-          ${cat.name} <span class="opacity-50">${count}</span></button>`;
-      }
-      container.innerHTML = html;
-    }
-
-    function filterCategory(cat) {
-      activeCategory = cat;
-      document.querySelectorAll('.pill').forEach(p => {
-        const isActive = p.dataset.cat === cat;
-        p.classList.toggle('active', isActive);
-        p.className = isActive
-          ? 'pill px-4 py-2 rounded-full text-sm font-medium bg-blue-600 text-white border border-blue-500 active'
-          : 'pill px-4 py-2 rounded-full text-sm font-medium bg-gh-800 text-gh-300 border border-gh-600 hover:border-gh-500';
-      });
-      renderRepos();
-    }
-
-    function setSort(s) {
-      sortBy = s;
-      document.getElementById('sort-stars').className = s === 'stars'
-        ? 'px-3 py-1 rounded-lg text-xs bg-blue-600 text-white' : 'px-3 py-1 rounded-lg text-xs bg-gh-800 text-gh-400 hover:bg-gh-600';
-      document.getElementById('sort-name').className = s === 'name'
-        ? 'px-3 py-1 rounded-lg text-xs bg-blue-600 text-white' : 'px-3 py-1 rounded-lg text-xs bg-gh-800 text-gh-400 hover:bg-gh-600';
-      renderRepos();
-    }
-
-    function renderRepos() {
-      const query = document.getElementById('search').value.toLowerCase().trim();
-      let filtered = DATA.repos.filter(r => {
-        const matchCat = activeCategory === 'all' || r.category === activeCategory;
-        const matchSearch = !query ||
-          r.name.toLowerCase().includes(query) ||
-          r.description.toLowerCase().includes(query) ||
-          r.author.toLowerCase().includes(query) ||
-          r.tags.some(t => t.toLowerCase().includes(query));
-        return matchCat && matchSearch;
-      });
-
-      // Sort
-      if (sortBy === 'stars') {
-        filtered.sort((a, b) => b.stars - a.stars);
-      } else {
-        filtered.sort((a, b) => a.name.localeCompare(b.name));
-      }
-
-      document.getElementById('stats').querySelector('span').textContent = `Menampilkan ${filtered.length} dari ${DATA.repos.length} repo`;
-      document.getElementById('empty').classList.toggle('hidden', filtered.length > 0);
-
-      document.getElementById('repos').innerHTML = filtered.map((r, i) => {
-        const catInfo = DATA.categories[r.category] || {};
-        const catColor = getCatColor(r.color || r.category);
-        const starsHtml = r.stars > 0
-          ? `<span class="star-badge font-bold text-sm">⭐ ${formatStars(r.stars)}</span>`
-          : '<span class="text-gh-500 text-xs">baru</span>';
-        const langHtml = r.language
-          ? `<span class="bg-gh-700/80 text-gh-300 px-2 py-0.5 rounded-md text-xs border border-gh-600">${r.language}</span>`
-          : '';
-        const hlBorder = r.highlight ? 'highlight-card' : 'border-gh-600';
-        const delay = Math.min(i * 30, 300);
-
-        return `
-          <a href="${r.url}" target="_blank" rel="noopener"
-            class="card-hover block bg-gh-800 ${hlBorder} rounded-xl p-5 hover:border-gh-500 fade-up"
-            style="animation-delay: ${delay}ms">
-            <div class="flex items-start justify-between mb-2">
-              <div class="flex items-center gap-2">
-                <h3 class="font-bold text-white text-base hover:text-blue-400 transition-colors">${r.name}</h3>
-                ${r.highlight ? '<span class="text-xs bg-blue-500/20 text-blue-400 px-1.5 py-0.5 rounded font-medium">populer</span>' : ''}
-              </div>
-              <span class="text-gh-500 text-xs flex-shrink-0 ml-2">@${r.author}</span>
-            </div>
-            <p class="text-gh-300 text-sm mb-4 leading-relaxed line-clamp-3">${r.description}</p>
-            <div class="flex flex-wrap items-center gap-2 mb-3">
-              ${starsHtml}
-              ${langHtml}
-              <span class="text-xs ${catColor} px-2 py-0.5 rounded-md border">${catInfo.name || ''}</span>
-            </div>
-            <div class="flex flex-wrap gap-1">
-              ${r.tags.map(t => `<span class="tag-cloud text-gh-500 text-xs px-1.5 py-0.5 rounded cursor-default">#${t}</span>`).join('')}
-            </div>
+  <div class="relative z-10">
+    <!-- Header -->
+    <header class="hero-glow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-8">
+        <!-- Logo -->
+        <div class="flex items-center justify-between mb-16">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-lg">🎮</div>
+            <span class="text-white font-bold text-lg tracking-tight">Playground</span>
+          </div>
+          <a href="https://github.com/Fahry27/github-playground" target="_blank" class="text-muted hover:text-white transition-colors text-sm flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            Source
           </a>
-        `;
-      }).join('');
-    }
+        </div>
 
-    document.getElementById('search').addEventListener('input', renderRepos);
-    document.addEventListener('keydown', e => {
-      if (e.key === '/' && document.activeElement !== document.getElementById('search')) {
-        e.preventDefault();
-        document.getElementById('search').focus();
-      }
-    });
-    loadData();
-  </script>
+        <!-- Hero Text -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent-light text-xs font-medium mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+            27 repos · 9 kategori · 555K+ stars
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-5 tracking-tight leading-[1.1]">
+            Tools AI & Dev<br>
+            <span class="bg-gradient-to-r from-accent-light via-purple-400 to-pink-400 bg-clip-text text-transparent">yang Worth Dicoba</span>
+          </h1>
+          <p class="text-muted text-lg leading-relaxed max-w-xl mx-auto">
+            Koleksi tools AI coding, promo scanner, bot otomasi & resources developer —
+            semua <span class="text-green-400 font-medium">gratis</span>, dijelasin pake <span class="text-white font-medium">Bahasa Indonesia</span>.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto mb-10">
+          <div class="stat-glow rounded-2xl p-4 text-center"><div class="text-2xl font-bold text-white">27</div><div class="text-xs text-muted mt-1">Total Repos</div></div>
+          <div class="stat-glow rounded-2xl p-4 text-center"><div class="text-2xl font-bold star-gradient">555K+</div><div class="text-xs text-muted mt-1">GitHub Stars</div></div>
+          <div class="stat-glow rounded-2xl p-4 text-center"><div class="text-2xl font-bold text-white">9</div><div class="text-xs text-muted mt-1">Kategori</div></div>
+          <div class="stat-glow rounded-2xl p-4 text-center"><div class="text-2xl font-bold text-green-400">100%</div><div class="text-xs text-muted mt-1">Bahasa ID</div></div>
+        </div>
+
+        <!-- Search -->
+        <div class="max-w-lg mx-auto relative">
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input type="text" id="search" placeholder="Cari repo, tag, atau tools..." autocomplete="off"
+            class="w-full bg-surface-2/80 border border-subtle rounded-2xl pl-11 pr-20 py-3.5 text-white placeholder-muted focus:outline-none focus:border-accent/40 search-glow transition-all text-sm">
+          <kbd class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-1 bg-surface-3 rounded-md text-muted text-xs font-mono border border-subtle">/</kbd>
+        </div>
+      </div>
+    </header>
+
+    <!-- Divider -->
+    <div class="glow-line"></div>
+
+    <!-- Categories -->
+    <div class="sticky top-0 z-40 bg-surface/90 backdrop-blur-xl border-b border-subtle/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3">
+        <div id="categories" class="flex gap-2 overflow-x-auto pb-1 scrollbar-hide"></div>
+      </div>
+    </div>
+
+    <!-- Results Bar -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-2">
+      <div class="flex items-center justify-between">
+        <span id="stats" class="text-sm text-muted"></span>
+        <div class="flex gap-1.5">
+          <button onclick="setSort('stars')" id="sort-stars" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-accent/15 text-accent-light border border-accent/20">⭐ Stars</button>
+          <button onclick="setSort('name')" id="sort-name" class="px-3 py-1.5 rounded-lg text-xs font-medium text-muted hover:text-white hover:bg-surface-3 transition-all">A→Z</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
+      <div id="repos" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"></div>
+      <div id="empty" class="hidden text-center py-20">
+        <div class="text-5xl mb-4">🔍</div>
+        <p class="text-lg text-white font-medium mb-1">Ga ketemu</p>
+        <p class="text-muted text-sm">Coba kata kunci lain atau reset filter.</p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-subtle/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted">
+        <div class="flex items-center gap-2">
+          <span>Dibuat oleh</span>
+          <a href="https://github.com/fahryramadhan" target="_blank" class="text-accent-light hover:underline font-medium">Fahry Ramadhan</a>
+          <span>·</span>
+          <span id="last-updated">-</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://kairosos.xyz" target="_blank" class="hover:text-white transition-colors">KairosOS</a>
+          <a href="https://router.kairosos.xyz" target="_blank" class="hover:text-white transition-colors">9Router</a>
+          <a href="https://github.com/Fahry27/github-playground" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+<script>
+let DATA={repos:[],categories:{}},activeCat='all',sortBy='stars';
+
+async function loadData(){
+  try{const r=await fetch('data/repos.json');DATA=await r.json()}catch(e){console.error(e);return}
+  document.getElementById('last-updated').textContent=DATA.lastUpdated||'-';
+  renderCats();render();
+}
+
+function fmtStars(n){if(n>=1e6)return(n/1e6).toFixed(1)+'M';if(n>=1e3)return(n/1e3).toFixed(n>=1e4?0:1)+'K';return n}
+
+function catColor(c){
+  const m={'ai-coding':'#6366f1','#deals':'#22c55e','agents':'#a855f7','automation':'#f97316','cli-tools':'#06b6d4','messaging':'#ec4899','learning':'#eab308','fintech':'#ef4444','devtools':'#94a3b8'};
+  return m[c]||'#64668b';
+}
+
+function catBadge(c){
+  const m={'ai-coding':'bg-indigo-500/10 text-indigo-400 border-indigo-500/20','deals':'bg-emerald-500/10 text-emerald-400 border-emerald-500/20','agents':'bg-purple-500/10 text-purple-400 border-purple-500/20','automation':'bg-orange-500/10 text-orange-400 border-orange-500/20','cli-tools':'bg-cyan-500/10 text-cyan-400 border-cyan-500/20','messaging':'bg-pink-500/10 text-pink-400 border-pink-500/20','learning':'bg-yellow-500/10 text-yellow-400 border-yellow-500/20','fintech':'bg-red-500/10 text-red-400 border-red-500/20','devtools':'bg-slate-500/10 text-slate-400 border-slate-500/20'};
+  return m[c]||'bg-gray-500/10 text-gray-400 border-gray-500/20';
+}
+
+function renderCats(){
+  const el=document.getElementById('categories');
+  let h=`<button onclick="filterCat('all')" data-c="all" class="pill active whitespace-nowrap px-4 py-2 rounded-xl text-sm font-medium">🔥 Semua</button>`;
+  for(const[k,v]of Object.entries(DATA.categories)){
+    const n=DATA.repos.filter(r=>r.category===k).length;
+    h+=`<button onclick="filterCat('${k}')" data-c="${k}" class="pill whitespace-nowrap px-4 py-2 rounded-xl text-sm font-medium text-muted hover:text-white">${v.name} <span class="opacity-50 ml-1">${n}</span></button>`;
+  }
+  el.innerHTML=h;
+}
+
+function filterCat(c){
+  activeCat=c;
+  document.querySelectorAll('.pill').forEach(p=>{
+    p.classList.toggle('active',p.dataset.c===c);
+    if(p.dataset.c!==c)p.classList.remove('text-white');
+  });
+  render();
+}
+
+function setSort(s){
+  sortBy=s;
+  document.getElementById('sort-stars').className=s==='stars'?'px-3 py-1.5 rounded-lg text-xs font-medium bg-accent/15 text-accent-light border border-accent/20':'px-3 py-1.5 rounded-lg text-xs font-medium text-muted hover:text-white hover:bg-surface-3 transition-all';
+  document.getElementById('sort-name').className=s==='name'?'px-3 py-1.5 rounded-lg text-xs font-medium bg-accent/15 text-accent-light border border-accent/20':'px-3 py-1.5 rounded-lg text-xs font-medium text-muted hover:text-white hover:bg-surface-3 transition-all';
+  render();
+}
+
+function render(){
+  const q=document.getElementById('search').value.toLowerCase().trim();
+  let list=DATA.repos.filter(r=>{
+    const mc=activeCat==='all'||r.category===activeCat;
+    const ms=!q||r.name.toLowerCase().includes(q)||r.description.toLowerCase().includes(q)||r.author.toLowerCase().includes(q)||r.tags.some(t=>t.includes(q));
+    return mc&&ms;
+  });
+  list.sort((a,b)=>sortBy==='stars'?b.stars-a.stars:a.name.localeCompare(b.name));
+
+  document.getElementById('stats').textContent=`${list.length} dari ${DATA.repos.length} repo`;
+  document.getElementById('empty').classList.toggle('hidden',list.length>0);
+
+  document.getElementById('repos').innerHTML=list.map((r,i)=>{
+    const cat=DATA.categories[r.category]||{};
+    const color=catColor(r.category);
+    const badge=catBadge(r.category);
+    const stars=r.stars>0?`<span class="star-gradient font-semibold text-sm">★ ${fmtStars(r.stars)}</span>`:`<span class="text-muted text-xs">baru</span>`;
+    const lang=r.language?`<span class="bg-surface-3 text-muted px-2 py-0.5 rounded-md text-xs border border-subtle">${r.language}</span>`:'';
+    const hl=r.highlight;
+    const delay=Math.min(i*35,350);
+
+    return`
+    <a href="${r.url}" target="_blank" rel="noopener" class="card block rounded-2xl p-5 fade-in group" style="animation-delay:${delay}ms;${hl?'border-color:rgba(99,102,241,0.18)':''}">
+      <div class="flex items-start justify-between mb-3">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <div class="w-8 h-8 rounded-lg flex items-center justify-center text-sm flex-shrink-0" style="background:${color}15;color:${color}">${cat.name?cat.name.split(' ')[0]:'📦'}</div>
+          <div class="min-w-0">
+            <h3 class="font-bold text-white text-sm group-hover:text-accent-light transition-colors truncate">${r.name}</h3>
+            <span class="text-muted text-xs">@${r.author}</span>
+          </div>
+        </div>
+        ${hl?'<span class="flex-shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-accent/15 text-accent-light border border-accent/20 uppercase tracking-wider">Hot</span>':''}
+      </div>
+      <p class="text-sm text-[#a0a0c0] leading-relaxed mb-4 line-clamp-3">${r.description}</p>
+      <div class="flex flex-wrap items-center gap-2 mb-3">
+        ${stars}${lang}<span class="cat-badge ${badge} px-2 py-0.5 rounded-md border">${cat.name||''}</span>
+      </div>
+      <div class="flex flex-wrap gap-1">${r.tags.map(t=>`<span class="tag text-muted text-[11px] px-1.5 py-0.5 rounded cursor-default">#${t}</span>`).join('')}</div>
+    </a>`;
+  }).join('');
+}
+
+document.getElementById('search').addEventListener('input',render);
+document.addEventListener('keydown',e=>{
+  if(e.key==='/'&&document.activeElement!==document.getElementById('search')){e.preventDefault();document.getElementById('search').focus()}
+  if(e.key==='Escape'){document.getElementById('search').value='';render()}
+});
+loadData();
+</script>
 </body>
 </html>
