@@ -35,6 +35,17 @@
       "highlight": true
     },
     {
+      "name": "hallmark",
+      "url": "https://github.com/nutlope/hallmark",
+      "author": "nutlope",
+      "description": "Skill desain anti-AI-slop buat Claude Code, Cursor, dan Codex. Bikin UI buatan AI lo keliatan natural, ga pasaran, dan lolos 57 parameter standard anti-AI-slop.",
+      "stars": 10600,
+      "language": "TypeScript",
+      "category": "agents",
+      "tags": ["design", "anti-slop", "claude-code", "cursor"],
+      "highlight": true
+    },
+    {
       "name": "generative-ai-for-beginners",
       "url": "https://github.com/microsoft/generative-ai-for-beginners",
       "author": "microsoft",
