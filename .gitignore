@@ -1,0 +1,19 @@
+# Node
+node_modules/
+package-lock.json
+bun.lockb
+yarn.lock
+pnpm-lock.yaml
+
+# Credentials / Local configs
+.env
+accounts.txt
+proxy_keys.txt
+*_keys.txt
+errorAccounts.txt
+logs/
+retryAccounts/
+agentrouter-spoof-proxy/proxy.log
+
+# System
+.DS_Store
